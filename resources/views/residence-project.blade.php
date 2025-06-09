@@ -2,7 +2,7 @@
 @section('content')
     <div class="relative w-full h-[60vh] md:h-[80vh]">
         <div class="absolute inset-0 w-full max-w-7xl mx-auto h-full">
-            <img src="{{ asset('assets/images/banner.png') }}" alt="" class="w-full h-full object-cover">
+            <img src="{{ asset($residence->image) }}" alt="" class="w-full h-full object-cover">
         </div>
 
         <div data-aos="fade-up" data-aos-duration="1400"
@@ -92,15 +92,24 @@
         </div>
     </div>
 
-    <!-- Lightbox HTML -->
     <div id="lightbox"
         class="fixed inset-0 w-full h-full bg-black md:bg-opacity-90 z-50 flex items-center justify-center hidden">
         <div class="relative max-w-4xl w-full h-full p-4 flex items-center justify-center">
             <button onclick="closeLightbox()"
-                class="absolute top-0 right-2 text-white text-3xl md:text-5xl hover:text-gray-300">&times;</button>
+                class="absolute top-0 right-2 text-[#fff] text-3xl md:text-5xl">&times;</button>
+
+            <!-- Prev button -->
+            <button id="prevBtn" onclick="prevImage()"
+                class="absolute left-6 lg:-left-[30px] text-[#fff] lg:text-[#000] bg-[#000] lg:bg-[#fff] w-6 md:w-10 h-6 md:h-10 rounded-full flex items-center justify-center text-lg md:text-2xl">&#10094;</button>
+
+            <!-- Next button -->
+            <button id="nextBtn" onclick="nextImage()"
+                class="absolute right-6 lg:-right-[30px] text-[#fff] lg:text-[#000] bg-[#000] lg:bg-[#fff] w-6 md:w-10 h-6 md:h-10 rounded-full flex items-center justify-center text-lg md:text-2xl">&#10095;</button>
+
             <img id="lightbox-img" class="w-full max-h-[80vh] object-contain" src="" alt="">
         </div>
     </div>
+
 
     <x-footer :contact="$contact" />
 
@@ -114,32 +123,57 @@
 @endsection
 @section('js')
     <script>
+        let currentImageIndex = 0;
+        let currentImageList = [];
+
         function openLightbox(src, alt) {
             const lightbox = document.getElementById('lightbox');
             const lightboxImg = document.getElementById('lightbox-img');
 
+            // Collect all image URLs in current swiper
+            const parentSlide = event.target.closest('.swiper-slide');
+            currentImageList = Array.from(parentSlide.closest('.swiper-wrapper').querySelectorAll('img'))
+                .map(img => img.src);
+
+            // Set current index
+            currentImageIndex = currentImageList.indexOf(src);
+
+            // Show lightbox with selected image
             lightboxImg.src = src;
             lightbox.classList.remove('hidden');
-            document.body.style.overflow = 'hidden'; // Prevent scrolling when lightbox is open
+            document.body.style.overflow = 'hidden';
         }
 
         function closeLightbox() {
-            const lightbox = document.getElementById('lightbox');
-            lightbox.classList.add('hidden');
-            document.body.style.overflow = ''; // Restore scrolling
+            document.getElementById('lightbox').classList.add('hidden');
+            document.body.style.overflow = '';
         }
 
-        // Close lightbox when clicking outside the image
+        function prevImage() {
+            if (currentImageList.length === 0) return;
+            currentImageIndex = (currentImageIndex - 1 + currentImageList.length) % currentImageList.length;
+            document.getElementById('lightbox-img').src = currentImageList[currentImageIndex];
+        }
+
+        function nextImage() {
+            if (currentImageList.length === 0) return;
+            currentImageIndex = (currentImageIndex + 1) % currentImageList.length;
+            document.getElementById('lightbox-img').src = currentImageList[currentImageIndex];
+        }
+
+        // Close lightbox on outside click
         document.getElementById('lightbox').addEventListener('click', function(e) {
-            if (e.target === this) {
-                closeLightbox();
-            }
+            if (e.target === this) closeLightbox();
         });
 
-        // Close lightbox with Escape key
+        // Close on Escape
         document.addEventListener('keydown', function(e) {
             if (e.key === 'Escape' && !document.getElementById('lightbox').classList.contains('hidden')) {
                 closeLightbox();
+            } else if (e.key === 'ArrowRight') {
+                nextImage();
+            } else if (e.key === 'ArrowLeft') {
+                prevImage();
             }
         });
     </script>
