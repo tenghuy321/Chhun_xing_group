@@ -223,27 +223,12 @@
                             class="block py-2 px-4 rounded hover:bg-gray-100">{{ $why_us_id->title[app()->getLocale()] }}</a>
                     </div>
                 </li>
-                <li class="w-full" x-data="{ openService: false }">
-                    <div class="flex justify-between items-center w-full">
-                        <a href="{{ route('residence-project') }}"
-                            class="py-3 px-4 rounded-md block w-full text-[#1e1e1e] {{ Request::routeIs('residence-project') ? 'bg-gradient font-[600]' : '' }}">
-                            {{ __('messages.Our Services') }}
-                        </a>
-                        <button @click="openService = !openService" class="text-lg px-2 focus:outline-none">
-                            <span x-text="openService ? '×' : '+'"></span>
-                        </button>
-                    </div>
+                <li class="w-full">
+                    <a href="{{ route('residence-project') }}"
+                        class="py-3 px-4 rounded-md block w-full text-[#1e1e1e] {{ Request::routeIs('residence-project') ? 'bg-gradient font-[600]' : '' }}">
+                        {{ __('messages.Project References') }}
 
-                    <div x-show="openService" x-transition:enter="transition ease-out duration-300"
-                        x-transition:enter-start="opacity-0 max-h-0" x-transition:enter-end="opacity-100 max-h-40"
-                        x-transition:leave="transition ease-in duration-200"
-                        x-transition:leave-start="opacity-100 max-h-40" x-transition:leave-end="opacity-0 max-h-0"
-                        class="ml-4 mt-2 space-y-1 overflow-hidden">
-                        <!-- Dropdown content -->
-                        <a href="{{ route('residence-project') }}#project-reference"
-                            data-drawer-hide="drawer-example"
-                            class="block py-2 px-4 rounded hover:bg-gray-100">{{ __('messages.Project References') }}</a>
-                    </div>
+                    </a>
                 </li>
                 <li class="w-full">
                     <a href="{{ route('real-estate-project') }}"

@@ -92,15 +92,8 @@
         <li class="relative group">
             <a href="{{ route('residence-project') }}"
                 class="pt-[37px] pb-[21.5px] px-4 nav_link text-white {{ Request::routeIs('residence-project') ? 'active' : '' }}">
-                {{ __('messages.Our Services') }}
+                {{ __('messages.Project References') }}
             </a>
-            <ul
-                class="absolute left-0 top-full mt-[18px] py-2 hidden group-hover:block bg-color text-[#1e1e1e] min-w-[340px] z-50 text-[16px]">
-                <li>
-                    <a href="{{ route('residence-project') }}#project-reference"
-                        class="block px-4 py-2 hover:bg-[#1e1e1e] hover:text-white">{{ __('messages.Project References') }}</a>
-                </li>
-            </ul>
         </li>
         <li>
             <a href="{{ route('real-estate-project') }}"

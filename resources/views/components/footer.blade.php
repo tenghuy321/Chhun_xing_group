@@ -26,7 +26,7 @@
                 </li>
                 <li>
                     <a href="{{ route('residence-project') }}" class="">
-                        {{ __('messages.Our Services') }}
+                        {{ __('messages.Project References') }}
                     </a>
                 </li>
                 <li>

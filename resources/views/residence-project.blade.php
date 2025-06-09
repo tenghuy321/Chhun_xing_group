@@ -8,13 +8,13 @@
         <div data-aos="fade-up" data-aos-duration="1400"
             class="absolute inset-0 flex flex-col items-center justify-center px-2 text-center">
             <h1 class="text-[30px] md:text-[50px] leading-tight font-bold text-white">
-                {{ $residence->title[app()->getLocale()] }}
+                {{ $projectExperince_title->title[app()->getLocale()] }}
             </h1>
         </div>
     </div>
 
 
-    <div class="w-full max-w-7xl mx-auto px-4 py-10">
+    {{-- <div class="w-full max-w-7xl mx-auto px-4 py-10">
         <h1 class="text-gradient text-[20px] md:text-[25px] mb-10 font-[600]">
             {{ $service_title->title[app()->getLocale()] }}</h1>
 
@@ -30,7 +30,7 @@
                 </div>
             @endforeach
         </div>
-    </div>
+    </div> --}}
 
     <div id="project-reference" class="w-full max-w-7xl mx-auto px-4 py-10">
         <h1 class="text-gradient text-[20px] md:text-[25px] mb-10 font-[600] max-w-[130px] sm:max-w-full">
