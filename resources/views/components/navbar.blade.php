@@ -98,7 +98,7 @@
                 class="absolute left-0 top-full mt-[18px] py-2 hidden group-hover:block bg-color text-[#1e1e1e] min-w-[340px] z-50 text-[16px]">
                 <li>
                     <a href="{{ route('residence-project') }}#project-reference"
-                        class="block px-4 py-2 hover:bg-[#1e1e1e] hover:text-white">Project References</a>
+                        class="block px-4 py-2 hover:bg-[#1e1e1e] hover:text-white">{{ __('messages.Project References') }}</a>
                 </li>
             </ul>
         </li>

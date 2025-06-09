@@ -242,7 +242,7 @@
                         <!-- Dropdown content -->
                         <a href="{{ route('residence-project') }}#project-reference"
                             data-drawer-hide="drawer-example"
-                            class="block py-2 px-4 rounded hover:bg-gray-100">Project References</a>
+                            class="block py-2 px-4 rounded hover:bg-gray-100">{{ __('messages.Project References') }}</a>
                     </div>
                 </li>
                 <li class="w-full">
