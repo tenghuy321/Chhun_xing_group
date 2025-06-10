@@ -1,6 +1,6 @@
 @extends('admin.layouts.app')
 @section('header')
-    Service Page Content
+    Project References Content
 @endsection
 @section('content')
     <div class="">
@@ -42,7 +42,7 @@
                                 </td>
                                 <td class="py-3 px-4 text-xs max-w-[200px]">
                                     <div class="flex items-center space-x-1">
-                                        <a href={{ route('residencelist.index') }}>
+                                        <a href={{ route('project_experince.index') }}>
                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
                                                 stroke="#966927" stroke-linecap="round" stroke-linejoin="round"
                                                 width="24" height="24" stroke-width="1.5">

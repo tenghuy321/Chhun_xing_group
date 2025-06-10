@@ -73,7 +73,7 @@
                             class="nav-link {{ Request::is('residence_page') ? 'bg-[#966927] rounded-md !text-[#ffffff]' : '' }}">
                             <a href="{{ url('residence_page') }}">
                                 <i class='bx bx-cog icon'></i>
-                                <span class="text nav-text">Our Services Page</span>
+                                <span class="text nav-text">Project Reference</span>
                             </a>
                         </li>
 
@@ -81,7 +81,7 @@
                             class="nav-link {{ Request::is('projectpage') ? 'bg-[#966927] rounded-md !text-[#ffffff]' : '' }}">
                             <a href="{{ url('projectpage') }}">
                                 <i class='bx bx-notepad icon'></i>
-                                <span class="text nav-text">Project Page</span>
+                                <span class="text nav-text">Real Estate Page</span>
                             </a>
                         </li>
 

@@ -25,18 +25,12 @@ class ResidencePageController extends Controller
         $validated = $request->validate([
             'title.en' => 'nullable|string|max:255',
             'title.kh' => 'nullable|string|max:255',
-            'content.en' => 'nullable|string',
-            'content.kh' => 'nullable|string',
         ]);
 
         $data = [
             'title' => [
                 'en' => $validated['title']['en'],
                 'kh' => $validated['title']['kh'],
-            ],
-            'content' => [
-                'en' => $validated['content']['en'],
-                'kh' => $validated['content']['kh'],
             ],
         ];
 
@@ -64,18 +58,12 @@ class ResidencePageController extends Controller
         $validated = $request->validate([
             'title.en' => 'nullable|string|max:255',
             'title.kh' => 'nullable|string|max:255',
-            'content.en' => 'nullable|string',
-            'content.kh' => 'nullable|string',
         ]);
 
         $data = [
             'title' => [
                 'en' => $validated['title']['en'],
                 'kh' => $validated['title']['kh'],
-            ],
-            'content' => [
-                'en' => $validated['content']['en'],
-                'kh' => $validated['content']['kh'],
             ],
         ];
 

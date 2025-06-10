@@ -18,9 +18,9 @@ class ResidenceProjectController extends Controller
     public function index()
     {
         $data['residence'] = ResidencePage::first();
-        $data['projectExperince_title'] = ResidenceList::find(3);
+        // $data['projectExperince_title'] = ResidenceList::find(3);
         $data['projectExperince'] = ProjectExperince::orderBy('order')->get();
-        $data['service_title'] = ResidenceList::find(2);
+        // $data['service_title'] = ResidenceList::find(2);
         $data['service'] = Service::get();
 
         $data['firm_id'] = AboutList::find(1);
