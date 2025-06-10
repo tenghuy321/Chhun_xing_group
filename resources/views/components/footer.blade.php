@@ -20,15 +20,16 @@
                     </a>
                 </li>
                 <li>
-                    <a href="{{ route('real-estate-project') }}" class="">
-                        {{ __('messages.Real Estate Project') }}
-                    </a>
-                </li>
-                <li>
                     <a href="{{ route('residence-project') }}" class="">
                         {{ __('messages.Project References') }}
                     </a>
                 </li>
+                <li>
+                    <a href="{{ route('real-estate-project') }}" class="">
+                        {{ __('messages.Real Estate Project') }}
+                    </a>
+                </li>
+
                 <li>
                     <a href="{{ route('contact-us') }}" class="">
                         {{ __('messages.Contact') }}
@@ -40,7 +41,8 @@
             <h1 class="text-[18px] text-gradient font-[600] mb-4">Keep In Touch</h1>
             <p>{{ $contact->location[app()->getLocale()] }}</p>
             <a href="mailto:{{ $contact->email }}">{{ $contact->email }}</a>
-            <span><a href="tel:{{ $contact->phone_number1 }}">{{ $contact->phone_number1 }}</a> / <a href="tel:{{ $contact->phone_number2 }}">{{ $contact->phone_number2 }}</a> </span>
+            <span><a href="tel:{{ $contact->phone_number1 }}">{{ $contact->phone_number1 }}</a> / <a
+                    href="tel:{{ $contact->phone_number2 }}">{{ $contact->phone_number2 }}</a> </span>
         </div>
         <div class="flex flex-col space-y-1 text-[12px]">
             <h1 class="text-[18px] text-gradient font-[600] mb-4">Follow</h1>
