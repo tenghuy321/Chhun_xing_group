@@ -1,6 +1,6 @@
 @extends('admin.layouts.app')
 @section('header')
-    Project
+    Residential Project Development
 @endsection
 @section('content')
     <div class="" x-data="reorderTable()" x-init="initSortable()">

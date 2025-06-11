@@ -1,6 +1,6 @@
 @extends('admin.layouts.app')
 @section('header')
-    Chhun Tin Content
+    Chhun Xing Residential Project Detail Content
 @endsection
 @section('content')
     <div class="" x-data="reorderTable()" x-init="initSortable()">

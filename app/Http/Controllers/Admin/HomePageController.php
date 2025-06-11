@@ -28,9 +28,7 @@ class HomePageController extends Controller
             'sub_title.en' => 'nullable|string|max:255',
             'sub_title.kh' => 'nullable|string|max:255',
             'sub_title1.en' => 'nullable|string|max:255',
-            'sub_title1.kh' => 'nullable|string|max:255',
-            'content.en' => 'nullable|string',
-            'content.kh' => 'nullable|string',
+            'sub_title1.kh' => 'nullable|string|max:255'
         ]);
 
         $data = [
@@ -45,10 +43,6 @@ class HomePageController extends Controller
             'sub_title1' => [
                 'en' => $validated['sub_title1']['en'],
                 'kh' => $validated['sub_title1']['kh'],
-            ],
-            'content' => [
-                'en' => $validated['content']['en'],
-                'kh' => $validated['content']['kh'],
             ],
         ];
 
@@ -80,8 +74,6 @@ class HomePageController extends Controller
             'sub_title.kh' => 'nullable|string|max:255',
             'sub_title1.en' => 'nullable|string|max:255',
             'sub_title1.kh' => 'nullable|string|max:255',
-            'content.en' => 'nullable|string',
-            'content.kh' => 'nullable|string',
         ]);
 
         $data = [
@@ -96,10 +88,6 @@ class HomePageController extends Controller
             'sub_title1' => [
                 'en' => $validated['sub_title1']['en'],
                 'kh' => $validated['sub_title1']['kh'],
-            ],
-            'content' => [
-                'en' => $validated['content']['en'],
-                'kh' => $validated['content']['kh'],
             ],
         ];
 

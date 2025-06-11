@@ -1,6 +1,6 @@
 <x-app-layout>
     <div class="max-w-4xl mx-auto bg-white shadow-md rounded-lg p-6 my-2">
-        <h2 class="text-2xl font-bold">Add New Project</h2>
+        <h2 class="text-2xl font-bold">Add New Residential Project Development</h2>
         <form action="{{ route('project.store') }}" method="POST" enctype="multipart/form-data" class="space-y-4">
             @csrf
             @component('admin.components.alert')

@@ -1,6 +1,6 @@
 <x-app-layout>
     <div class="max-w-4xl mx-auto bg-white shadow-md rounded-lg p-6 my-2">
-        <h2 class="text-2xl font-bold">Edit Project</h2>
+        <h2 class="text-2xl font-bold">Edit Residential Project Development</h2>
         <form action="{{ route('project.update', $project->id) }}" method="POST" enctype="multipart/form-data"
             class="space-y-4">
             @csrf

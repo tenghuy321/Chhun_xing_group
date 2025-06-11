@@ -13,14 +13,12 @@ class HomePage extends Model
         'title',
         'sub_title',
         'sub_title1',
-        'content',
         'image'
     ];
 
     protected $casts = [
         'title' => 'array',
         'sub_title' => 'array',
-        'sub_title1' => 'array',
-        'content' => 'array'
+        'sub_title1' => 'array'
     ];
 }

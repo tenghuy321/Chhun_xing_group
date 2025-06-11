@@ -23,7 +23,6 @@
                             <th class="text-left py-3 px-4 text-xs w-[200px] border-r border-[#966927]">Image</th>
                             <th class="text-left py-3 px-4 text-xs w-[200px] border-r border-[#966927]">Title</th>
                             <th class="text-left py-3 px-4 text-xs w-[200px] border-r border-[#966927]">Sub_title</th>
-                            <th class="text-left py-3 px-4 text-xs w-[200px] border-r border-[#966927]">Content</th>
                             <th class="text-left py-3 px-4 text-xs w-[200px]">Actions</th>
                         </tr>
                     </thead>
@@ -47,16 +46,6 @@
                                         </p>
                                         <p>{{ $homepage->sub_title['kh'] ?? '' }} {{ $homepage->sub_title1['kh'] ?? '' }}
                                         </p>
-                                    </div>
-                                </td>
-                                <td class="py-3 px-4 text-xs max-w-[200px] border-r border-[#966927]">
-                                    <div class="flex flex-col">
-                                        <div class="line-clamp-1">
-                                            {!! $homepage->content['en'] ?? '' !!}
-                                        </div>
-                                        <div class="line-clamp-1">
-                                            {!! $homepage->content['kh'] ?? '' !!}
-                                        </div>
                                     </div>
                                 </td>
                                 <td class="py-3 px-4 h-full max-w-[200px]">

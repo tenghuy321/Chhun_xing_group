@@ -26,13 +26,6 @@
                             id="sub_title1_en" class="mt-1 block w-full p-2 border rounded-md text-[#000] text-sm">
                         <x-input-error class="mt-2" :messages="$errors->get('sub_title1.en')" />
                     </div>
-                    <div>
-                        <label for="content_en" class="block text-sm font-medium text-gray-700">Content</label>
-                        <textarea name="content[en]" id="content_en" rows="4"
-                            class="mt-1 block w-full p-2 border rounded-md text-[#000] text-sm">{{ old('content.en') }}</textarea>
-                        <x-input-error class="mt-2" :messages="$errors->get('content.en')" />
-                    </div>
-
                 </div>
 
                 <div class="p-0 space-y-4">
@@ -54,12 +47,6 @@
                         <input value="{{ old('sub_title1.kh') }}" type="text" name="sub_title1[kh]"
                             id="sub_title1_kh" class="mt-1 block w-full p-2 border rounded-md text-[#000] text-sm">
                         <x-input-error class="mt-2" :messages="$errors->get('sub_title1.kh')" />
-                    </div>
-                    <div>
-                        <label for="content_kh" class="block text-sm font-medium text-gray-700">Content</label>
-                        <textarea name="content[kh]" id="content_kh" rows="4"
-                            class="mt-1 block w-full p-2 border rounded-md text-[#000] text-sm">{{ old('content.kh') }}</textarea>
-                        <x-input-error class="mt-2" :messages="$errors->get('content.kh')" />
                     </div>
                 </div>
             </div>

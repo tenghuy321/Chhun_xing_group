@@ -1,6 +1,6 @@
 <x-app-layout>
     <div class="max-w-4xl mx-auto bg-white shadow-md rounded-lg p-6 my-2">
-        <h2 class="text-2xl font-bold">Edit Chhun Tin</h2>
+        <h2 class="text-2xl font-bold">Edit Chhun Xing Residential Project Detail</h2>
         <form action="{{ route('residence.update', $residence->id) }}" method="POST" enctype="multipart/form-data"
             class="space-y-4">
             @csrf
