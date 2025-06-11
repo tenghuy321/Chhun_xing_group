@@ -2,7 +2,7 @@
 @section('content')
     <div class="relative w-full h-screen">
         <div class="absolute inset-0 w-full max-w-7xl mx-auto">
-            <img src="{{ asset('assets/images/banner.png') }}" alt="" class="w-full h-full object-cover">
+            <img src="{{ asset($contact->image) }}" alt="" class="w-full h-full object-cover">
         </div>
 
         <div data-aos="fade-up" data-aos-duration="1400"
